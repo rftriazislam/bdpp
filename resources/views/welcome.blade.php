@@ -903,7 +903,7 @@
 </head>
 
 <body class="font-sans antialiased dark:bg-black dark:text-white/50"
-    style="background-image: url('{{ asset('forntend/bermuda-traingle.svg') }}');">
+    style="background-image: url('{{ asset('forntend/bg.svg') }}');">
     <div class="bg-gray-50 text-black/50 dark:bg-black dark:text-white/50">
         {{-- <img id="background" class="absolute "
             src="{{asset('forntend')}}/bg.svg" /> --}}
