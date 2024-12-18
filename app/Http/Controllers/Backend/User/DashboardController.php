@@ -46,7 +46,7 @@ class DashboardController extends Controller
    }
    public function leader_board()
    {
-      return $user = User::with('allmembers')
+        $user = User::with('allmembers')
          ->where('refer_id', auth()->user()->id)
          ->take(1)
          ->get();
