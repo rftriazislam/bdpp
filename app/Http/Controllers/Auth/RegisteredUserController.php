@@ -33,7 +33,7 @@ class RegisteredUserController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'phone' => ['required', 'string', 'max:13'],
             'birth_day' => ['required'],
-            'refer_id' => ['required', 'exists:users,id'],
+            // 'refer_id' => ['required', 'exists:users,id'],
             'country' => ['nullable'],
             'city' => ['required'],
             'thana' => ['required'],
