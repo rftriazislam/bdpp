@@ -36,7 +36,11 @@ Route::group(['middleware' => ['auth', 'user'], 'prefix' => 'dashboard', 'as' =>
 
     Route::get('profile', [UserDashboardController::class, 'profile'])->name('profile');
     Route::get('my-team', [UserDashboardController::class, 'my_team'])->name('my_team');
+
     Route::get('leader-board', [UserDashboardController::class, 'leader_board'])->name('leader_board');
+    Route::get('top-board', [UserDashboardController::class, 'top_board'])->name('top_board');
+    Route::get('my-achievement', [UserDashboardController::class, 'my_aceive'])->name('my_aceive');
+
     Route::post('profile-update', [UserDashboardController::class, 'profileUpdate'])->name('profileUpdate');
     Route::get('logout', [UserDashboardController::class, 'logout'])->name('logout');
 });

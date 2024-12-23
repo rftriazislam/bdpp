@@ -33,15 +33,34 @@ class User extends Authenticatable
         'thana'
     ];
 
-public function members(){
-  return  $this->hasMany(User::class,'refer_id','id');
-}
+    public function members()
+    {
+        return  $this->hasMany(User::class, 'refer_id', 'id');
+    }
+    public function childs()
+    {
+        return  $this->hasOne(UserView::class, 'user_id', 'id');
+    }
 
-public function allmembers()
-{
-    return $this->members()->with('allmembers');
-}
+    public function allmembers()
+    {
+        return $this->members()->withCount('allmembers');
+    }
 
+    public function countChildren($node = null)
+    {
+        $query = $this->members();
+        // if (!empty($node))
+        // {
+        //     $query = $query->where('node', $node);
+        // }
+
+        $count = 0;
+        foreach ($query->get() as $child) {
+            $count += $child->countChildren() + 1; // Plus 1 to count the direct child
+        }
+        return $count;
+    }
     /**
      * The attributes that should be hidden for serialization.
      *

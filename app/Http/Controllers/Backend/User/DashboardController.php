@@ -21,6 +21,7 @@ use App\Models\WinnMoney;
 use App\Models\WithdrawMoney;
 use Illuminate\Http\Request;
 use Auth;
+use Illuminate\Support\Facades\DB;
 
 class DashboardController extends Controller
 {
@@ -40,18 +41,39 @@ class DashboardController extends Controller
    }
    public function my_team()
    {
-      $user = User::withCount('members')->where('refer_id', auth()->user()->id)->get();
+      $users = User::leftJoin('refer_user_table', 'refer_user_table.user_id', 'users.id')
+         ->orderBy('total', 'desc')
+         ->where('users.refer_id', auth()->user()->id)->get();
 
-      return view('frontend.pages.my_team', compact('user'));
+      return view('frontend.pages.my_team', compact('users'));
    }
    public function leader_board()
    {
-        $user = User::with('allmembers')
-         ->where('refer_id', auth()->user()->id)
-         ->take(1)
-         ->get();
+      // ini_set('memory_limit', '-1');
+
+      $user = User::with('childs')->get();
+
 
       return view('frontend.pages.leader_board', compact('user'));
+   }
+   public function top_board()
+   {
+
+      $users = User::leftJoin('refer_user_table', 'refer_user_table.user_id', 'users.id')
+         ->orderBy('total', 'desc')
+         ->get();
+
+      return view('frontend.pages.top_board', compact('users'));
+   }
+   public function my_aceive()
+   {
+
+      $users = User::leftJoin('refer_user_table', 'refer_user_table.user_id', 'users.id')
+         ->orderBy('total', 'desc')
+         ->where('id', auth()->user()->id)
+         ->first();
+
+      return view('frontend.pages.my_aceive', compact('users'));
    }
    public function profileUpdate(Request $request)
    {
