@@ -68,12 +68,71 @@ class DashboardController extends Controller
    public function my_aceive()
    {
 
-      $users = User::leftJoin('refer_user_table', 'refer_user_table.user_id', 'users.id')
-         ->orderBy('total', 'desc')
-         ->where('id', auth()->user()->id)
-         ->first();
+      // $users = User::leftJoin('refer_user_table', 'refer_user_table.user_id', 'users.id')
+      //    ->orderBy('total', 'desc')
+      //    ->where('id', auth()->user()->id)
+      //    ->first();
 
-      return view('frontend.pages.my_aceive', compact('users'));
+      $total_1 = User::where('refer_id', auth()->user()->id);
+      $pluck_1  = $total_1->pluck('id');
+      $level_1  = collect($pluck_1)->count();
+
+      $total_2  = User::whereIn('refer_id', $pluck_1);
+      $pluck_2  = $total_2->pluck('id');
+      $level_2  = collect($pluck_2)->count();
+
+      $total_3  = User::whereIn('refer_id', $pluck_2);
+      $pluck_3  = $total_3->pluck('id');
+      $level_3  = collect($pluck_3)->count();
+
+      $total_4  = User::whereIn('refer_id', $pluck_3);
+      $pluck_4  = $total_4->pluck('id');
+      $level_4  = collect($pluck_4)->count();
+
+      $total_5  = User::whereIn('refer_id', $pluck_4);
+      $pluck_5  = $total_5->pluck('id');
+      $level_5  = collect($pluck_5)->count();
+
+      $total_6  = User::whereIn('refer_id', $pluck_5);
+      $pluck_6  = $total_6->pluck('id');
+      $level_6  = collect($pluck_6)->count();
+
+      $total_7  = User::whereIn('refer_id', $pluck_6);
+      $pluck_7  = $total_7->pluck('id');
+      $level_7  = collect($pluck_7)->count();
+
+      $total_8  = User::whereIn('refer_id', $pluck_7);
+      $pluck_8  = $total_8->pluck('id');
+      $level_8  = collect($pluck_8)->count();
+
+      $total_9  = User::whereIn('refer_id', $pluck_8);
+      $pluck_9  = $total_9->pluck('id');
+      $level_9  = collect($pluck_9)->count();
+
+      $total_10  = User::whereIn('refer_id', $pluck_9);
+      $pluck_10  = $total_10->pluck('id');
+      $level_10  = collect($pluck_10)->count();
+
+      $total_11  = User::whereIn('refer_id', $pluck_10);
+      $pluck_11  = $total_11->pluck('id');
+      $level_11  = collect($pluck_11)->count();
+
+
+
+
+      return view('frontend.pages.my_aceive', compact(
+         'level_1',
+         'level_2',
+         'level_3',
+         'level_4',
+         'level_5',
+         'level_6',
+         'level_7',
+         'level_8',
+         'level_9',
+         'level_10',
+         'level_11'
+      ));
    }
    public function profileUpdate(Request $request)
    {

@@ -8,7 +8,8 @@
     </style>
 @endsection
 @section('content')
-    <div class="row ">
+<h1>Welcome</h1>
+    {{-- <div class="row ">
         <a class=" col-xl-3 col-lg-6 col-md-6 col-sm-6 col-xs-12" href=" " style="text-decoration: none">
             <div>
                 <div class="card">
@@ -126,5 +127,5 @@
         </a>
 
 
-    </div>
+    </div> --}}
 @endsection

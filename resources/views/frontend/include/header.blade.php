@@ -12,7 +12,7 @@
     <ul class="navbar-nav navbar-right">
         <li class="dropdown dropdown-list-toggle">
             <p class=" text-white">
-                ID : 12345
+                ID : {{auth()->user()->id}}
             </p>
 
         </li>
@@ -66,7 +66,7 @@
                         My Achievement </span></a>
             </li>
             <li class="dropdown ">
-                <a href=" " class="nav-link  text-white"><i data-feather="monitor"></i><span>
+                <a class="nav-link  text-white"><i data-feather="monitor"></i><span>
                         Notice Board</span></a>
             </li>
             <li class="dropdown ">
@@ -78,23 +78,23 @@
                         Top Board</span></a>
             </li>
             <li class="dropdown ">
-                <a href=" " class="nav-link  text-white"><i data-feather="monitor"></i><span>
+                <a   class="nav-link  text-white"><i data-feather="monitor"></i><span>
                         Learning</span></a>
             </li>
             <li class="dropdown ">
-                <a href=" " class="nav-link  text-white"><i data-feather="monitor"></i><span>
+                <a class="nav-link  text-white"><i data-feather="monitor"></i><span>
                         Job</span></a>
             </li>
             <li class="dropdown ">
-                <a href=" " class="nav-link  text-white"><i data-feather="monitor"></i><span>
+                <a  class="nav-link  text-white"><i data-feather="monitor"></i><span>
                         Enterpreneur</span></a>
             </li>
             <li class="dropdown ">
-                <a href=" " class="nav-link  text-white"><i data-feather="monitor"></i><span>
+                <a  class="nav-link  text-white"><i data-feather="monitor"></i><span>
                         Earning</span></a>
             </li>
             <li class="dropdown ">
-                <a href=" " class="nav-link  text-white"><i data-feather="monitor"></i><span>
+                <a  class="nav-link  text-white"><i data-feather="monitor"></i><span>
                         Leading</span></a>
             </li>
 
