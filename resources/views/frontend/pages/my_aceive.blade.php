@@ -15,7 +15,7 @@
 
         <div class="p-2">
             <div class="p-2 card">
-                <h4> <b >Present Rank:</b>
+                <h4> <b >Present Rank:</b> {{$level_2 }}
                     @if ($level_1 > 5 && $level_1 < 25)
                         Group Leader
                     @elseif($level_2 > 25 && $level_2 < 125)
