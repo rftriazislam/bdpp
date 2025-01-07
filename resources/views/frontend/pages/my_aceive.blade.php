@@ -15,26 +15,26 @@
 
         <div class="p-2">
             <div class="p-2 card">
-                <h4> <b >Present Rank:</b> {{$level_2 }}
-                    @if ($level_1 > 5 && $level_1 < 25)
+                <h4> <b >Present Rank:</b>  
+                    @if ($level_1 > 5 && $level_2 < 25)
                         Group Leader
-                    @elseif($level_2 > 25 && $level_2 < 125)
+                    @elseif($level_2 > 25 && $level_3 < 125)
                         Unit Leader
-                    @elseif($level_3 > 125 && $level_3 < 625)
+                    @elseif($level_3 > 125 &&$level_4 < 625)
                         Team Leader
-                    @elseif($level_4 > 625 && $level_4 < 3125)
+                    @elseif($level_4 > 625 && $level_5 < 3125)
                         Generation Leader
-                    @elseif($level_5 > 3125 && $level_5 < 15625)
+                    @elseif($level_5 > 3125 && $level_6 < 15625)
                         Ward Leader
-                    @elseif($level_6 > 15625 && $level_6 < 78125)
+                    @elseif($level_6 > 15625 && $level_7 < 78125)
                         Union Leader
-                    @elseif($level_7 > 78125 && $level_7 < 390625)
+                    @elseif($level_7 > 78125 && $level_8 < 390625)
                         Prime Leader
-                    @elseif($level_8 > 390625 && $level_8 < 1953125)
+                    @elseif($level_8 > 390625 && $level_9 < 1953125)
                         District Leader
-                    @elseif($level_9 > 1953125 && $level_9 < 9765625)
+                    @elseif($level_9 > 1953125 && $level_10 < 9765625)
                         Division Leader
-                    @elseif($level_10 > 9765625 && $level_10 < 48828125)
+                    @elseif($level_10 > 9765625 && $level_11 < 48828125)
                         Country Leader
                     @elseif($level_11 > 48828125)
                         Super Leader
@@ -43,25 +43,25 @@
                 <h4> <b >Next Rank : </b>
                     @if ($level_1 < 5)
                         Group Leader
-                    @elseif($level_1 > 5 && $level_1 < 25)
+                    @elseif($level_1 > 5 && $level_2 < 25)
                         Unit Leader
-                    @elseif($level_2 > 25 && $level_2 < 125)
+                    @elseif($level_2 > 25 && $level_3 < 125)
                         Team Leader
-                    @elseif($level_3 > 125 && $level_3 < 625)
+                    @elseif($level_3 > 125 && $level_4 < 625)
                         Generation Leader
-                    @elseif($level_4 > 625 && $level_4 < 3125)
+                    @elseif($level_4 > 625 && $level_5 < 3125)
                         Ward Leader
-                    @elseif($level_5 > 3125 && $level_5 < 15625)
+                    @elseif($level_5 > 3125 && $level_6 < 15625)
                         Union Leader
-                    @elseif($level_6 > 15625 && $level_6 < 78125)
+                    @elseif($level_6 > 15625 && $level_7 < 78125)
                         Prime Leader
-                    @elseif($level_7 > 78125 && $level_7 < 390625)
+                    @elseif($level_7 > 78125 && $level_8 < 390625)
                         District Leader
-                    @elseif($level_8 > 390625 && $level_8 < 1953125)
+                    @elseif($level_8 > 390625 && $level_9 < 1953125)
                         Division Leader
-                    @elseif($level_9 > 1953125 && $level_9 < 9765625)
+                    @elseif($level_9 > 1953125 && $level_10 < 9765625)
                         Country Leader
-                    @elseif($level_10 > 9765625 && $level_10 < 48828125)
+                    @elseif($level_10 > 9765625 && $level_11 < 48828125)
                         Super Leader
                     @elseif($level_11 > 48828125)
                         Super Leader
