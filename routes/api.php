@@ -14,6 +14,7 @@ Route::get('/user', function (Request $request) {
 Route::controller(RegisterController::class)->group(function () {
     Route::post('register', 'register');
     Route::post('login', 'login');
+    Route::POST('get-thana', 'getThana')->name('get-thana');
 });
 
 Route::middleware('auth:sanctum')->group(function () {

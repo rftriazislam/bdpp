@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Auth;
 
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Validation\Rules\Password;
 
@@ -41,6 +42,20 @@ class RegisterController extends BaseController
         $user['token'] =  $user->createToken('MyApp')->plainTextToken;
 
         return $this->sendResponse($user, 'User register successfully.');
+    }
+
+
+
+    public function getThana(Request $request)
+    {
+
+        $zone = $request->zone;
+
+        $data['thana'] = DB::table('police_stations')
+            ->select('id', 'name')
+            ->where('zone', $zone)
+            ->orderBy('name', 'asc')->get();
+        return response()->json($data);
     }
 
     /**

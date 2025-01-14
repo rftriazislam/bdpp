@@ -57,26 +57,28 @@
                     <x-input-error :messages="$errors->get('country')" class="mt-2" />
                 </div> --}}
                 <div>
-                    <label for="cars1">District </label>
+                    <label for="district">District </label>
 
-                    <select
+                    <select id="district"
                         class="border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm block mt-1 w-full"
-                        name="city" id="cars1">
-                        <option value="Dhaka">Dhaka</option>
-                        <option value="Barishal">Barishal</option>
-                        <option value="Khulna">Khulna</option>
+                        name="city"  >
+                        <option >Select</option>
+                        @foreach ($district as $dis )
+                              <option value="{{$dis->zone}}">{{$dis->zone}}</option>
+                        @endforeach
+                      
+                      
                     </select>
                     <x-input-error :messages="$errors->get('city')" class="mt-2" />
                 </div>
                 <div>
-                    <label for="cars1">Thana </label>
+                    <label for="thana">Thana </label>
 
-                    <select
+                    <select 
                         class="border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm block mt-1 w-full"
-                        name="thana" id="cars1">
-                        <option value="Dhaka">Mirpur</option>
-                        <option value="Barishal">BADDA</option>
-                        <option value="Khulna">Uttera</option>
+                        name="thana" id="thana">
+                        <option >Select</option>
+                        
                     </select>
                     <x-input-error :messages="$errors->get('city')" class="mt-2" />
                 </div>
@@ -132,3 +134,71 @@
         </form>
     </div>
 </x-guest-layout>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script>
+
+    $(document).ready(function () {
+
+
+
+        /*------------------------------------------
+
+        --------------------------------------------
+
+        Country Dropdown Change Event
+
+        --------------------------------------------
+
+        --------------------------------------------*/
+
+        $('#district').on('change', function () {
+
+            var zone = this.value;
+
+            $("#thana").html('');
+
+            $.ajax({
+
+                url: "{{route('get-thana')}}",
+
+                type: "POST",
+
+                data: {
+
+                    zone: zone,
+
+                    _token: '{{csrf_token()}}'
+
+                },
+
+                dataType: 'json',
+
+                success: function (result) {
+
+                    $('#thana').html('<option value="">-- Select Thana --</option>');
+
+                    $.each(result.thana, function (key, value) {
+
+                        $("#thana").append('<option value="' + value
+
+                            .id + '">' + value.name + '</option>');
+
+                    });
+
+                   
+
+                }
+
+            });
+
+        });
+
+
+
+   
+    });
+
+</script>
