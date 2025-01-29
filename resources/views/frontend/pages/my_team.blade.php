@@ -23,7 +23,7 @@
                                         <h5 class="font-15"> Gen : </h5>
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 ">
-                                        <h5 class="font-15">District :<span style="font-weight: 300"> {{$user->thana}}</span> </h5>
+                                        <h5 class="font-15">District :<span style="font-weight: 300"> {{$user->city_name}}</span> </h5>
                                         <h5 class="font-15">Rank :
                                             
                                             @php

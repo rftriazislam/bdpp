@@ -36,13 +36,15 @@ class DashboardController extends Controller
    }
    public function profile()
    {
+      $district = DB::table('police_stations')->select('zone')->distinct('zone')->orderBy('zone', 'asc')->get();
 
-      return view('frontend.pages.profile.profile');
+      return view('frontend.pages.profile.profile', compact('district'));
    }
    public function my_team()
    {
-      $users = User::leftJoin('refer_user_table', 'refer_user_table.user_id', 'users.id')
-         ->orderBy('total', 'desc')
+      $users = User::select('users.*', 'refer_user_table.*', 'police_stations.zone as city_name')->leftJoin('refer_user_table', 'refer_user_table.user_id', 'users.id')
+         ->leftJoin('police_stations', 'police_stations.id', 'users.thana')
+         ->orderBy('refer_user_table.total', 'desc')
          ->where('users.refer_id', auth()->user()->id)->get();
 
       return view('frontend.pages.my_team', compact('users'));

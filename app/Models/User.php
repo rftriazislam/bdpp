@@ -23,6 +23,7 @@ class User extends Authenticatable
         'refer_id',
         'country',
         'city',
+        'district',
         'phone',
         'role',
         'address',

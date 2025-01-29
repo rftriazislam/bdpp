@@ -51,6 +51,7 @@ class RegisteredUserController extends Controller
             'thana' => $request->thana,
             'country' => $request->country,
             'city' => $request->city,
+            'district' => $request->city,
             'phone' => $request->phone,
             'address' => $request->address,
             'role' => 'user',

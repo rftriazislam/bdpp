@@ -11,6 +11,20 @@ use Illuminate\View\View;
 
 class ProfileController extends Controller
 {
+
+
+    public function home(): view
+    {
+        if (!Auth::check()) {
+            return view('welcome');
+        } else {
+
+            return view('frontend.pages.dashboard');
+        }
+    }
+
+
+
     /**
      * Display the user's profile form.
      */

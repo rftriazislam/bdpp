@@ -261,147 +261,30 @@
                                                     </select>
                                                 </div>
                                                 <div class="form-group col-md-5 col-12">
-                                                    <label for="position2">District</label>
-                                                    <select id="position2" class="form-control" name="district">
-                                                        <option style="color: black" disabled>Select</option>
-                                                        <option {{auth()->user()->district=='Bagerhat'}} value="Bagerhat">Bagerhat</option>
-                                                        <option {{auth()->user()->district=='Bandarban'}} value="Bandarban">Bandarban</option>
-                                                        <option {{auth()->user()->district=='Barguna'}} value="Barguna">Barguna</option>
-                                                        <option {{auth()->user()->district=='Barisal'}} value="Barisal">Barisal</option>
-                                                        <option {{auth()->user()->district=='Bhola'}} value="Bhola">Bhola</option>
-                                                        <option {{auth()->user()->district=='Bogra'}} value="Bogra">Bogra</option>
-                                                        <option {{auth()->user()->district=='Brahmanbaria'}} value="Brahmanbaria">Brahmanbaria</option>
-                                                        <option {{auth()->user()->district=='Chandpur'}} value="Chandpur">Chandpur</option>
-                                                        <option {{auth()->user()->district=='Chittagong'}} value="Chittagong">Chittagong</option>
-                                                        <option {{auth()->user()->district=='Chuadanga'}} value="Chuadanga">Chuadanga</option>
-                                                        <option {{auth()->user()->district=='Comilla'}} value="Comilla">Comilla</option>
-                                                        <option {{auth()->user()->district=='Cox"sBazar'}} value="Cox'sBazar">Cox'sBazar</option>
-                                                        <option {{auth()->user()->district=='Dhaka'}} value="Dhaka">Dhaka</option>
-                                                        <option {{auth()->user()->district=='Dinajpur'}} value="Dinajpur">Dinajpur</option>
-                                                        <option {{auth()->user()->district=='Faridpur'}} value="Faridpur">Faridpur</option>
-                                                        <option {{auth()->user()->district=='Feni'}} value="Feni">Feni</option>
-                                                        <option {{auth()->user()->district=='Gaibandha'}} value="Gaibandha">Gaibandha</option>
-                                                        <option {{auth()->user()->district=='Gazipur'}} value="Gazipur">Gazipur</option>
-                                                        <option {{auth()->user()->district=='Gopalganj'}} value="Gopalganj">Gopalganj</option>
-                                                        <option {{auth()->user()->district=='Habiganj'}} value="Habiganj">Habiganj</option>
-                                                        <option {{auth()->user()->district=='Jaipurhat'}} value="Jaipurhat">Jaipurhat</option>
-                                                        <option {{auth()->user()->district=='Jamalpur'}} value="Jamalpur">Jamalpur</option>
-                                                        <option {{auth()->user()->district=='Jessore'}} value="Jessore">Jessore</option>
-                                                        <option {{auth()->user()->district=='Jhalokati'}} value="Jhalokati">Jhalokati</option>
-                                                        <option {{auth()->user()->district=='Jhenaidah'}} value="Jhenaidah">Jhenaidah</option>
-                                                        <option {{auth()->user()->district=='Khagrachari'}} value="Khagrachari">Khagrachari</option>
-                                                        <option {{auth()->user()->district=='Khulna'}} value="Khulna">Khulna</option>
-                                                        <option {{auth()->user()->district=='Kishoreganj'}} value="Kishoreganj">Kishoreganj</option>
-                                                        <option {{auth()->user()->district=='Kurigram'}} value="Kurigram">Kurigram</option>
-                                                        <option {{auth()->user()->district=='Kushtia'}} value="Kushtia">Kushtia</option>
-                                                        <option {{auth()->user()->district=='Lakshmipur'}} value="Lakshmipur">Lakshmipur</option>
-                                                        <option {{auth()->user()->district=='Lalmonirhat'}} value="Lalmonirhat">Lalmonirhat</option>
-                                                        <option {{auth()->user()->district=='Madaripur'}} value="Madaripur">Madaripur</option>
-                                                        <option {{auth()->user()->district=='Magura'}} value="Magura">Magura</option>
-                                                        <option {{auth()->user()->district=='Manikganj'}} value="Manikganj">Manikganj</option>
-                                                        <option {{auth()->user()->district=='Maulvibazar'}} value="Maulvibazar">Maulvibazar</option>
-                                                        <option {{auth()->user()->district=='Meherpur'}} value="Meherpur">Meherpur</option>
-                                                        <option {{auth()->user()->district=='Munshiganj'}} value="Munshiganj">Munshiganj</option>
-                                                        <option {{auth()->user()->district=='Mymensingh'}} value="Mymensingh">Mymensingh</option>
-                                                        <option {{auth()->user()->district=='Naogaon'}} value="Naogaon">Naogaon</option>
-                                                        <option {{auth()->user()->district=='Narail'}} value="Narail">Narail</option>
-                                                        <option {{auth()->user()->district=='Narayanganj'}} value="Narayanganj">Narayanganj</option>
-                                                        <option {{auth()->user()->district=='Narsingdi'}} value="Narsingdi">Narsingdi</option>
-                                                        <option {{auth()->user()->district=='Natore'}} value="Natore">Natore</option>
-                                                        <option {{auth()->user()->district=='Nawabganj'}} value="Nawabganj">Nawabganj</option>
-                                                        <option {{auth()->user()->district=='Netrokona'}} value="Netrokona">Netrokona</option>
-                                                        <option {{auth()->user()->district=='Nilphamari'}} value="Nilphamari">Nilphamari</option>
-                                                        <option {{auth()->user()->district=='Noakhali'}} value="Noakhali">Noakhali</option>
-                                                        <option {{auth()->user()->district=='Pabna'}} value="Pabna">Pabna</option>
-                                                        <option {{auth()->user()->district=='Panchagarh'}} value="Panchagarh">Panchagarh</option>
-                                                        <option {{auth()->user()->district=='Patuakhali'}} value="Patuakhali">Patuakhali</option>
-                                                        <option {{auth()->user()->district=='Pirojpur'}} value="Pirojpur">Pirojpur</option>
-                                                        <option {{auth()->user()->district=='Rajbari'}} value="Rajbari">Rajbari</option>
-                                                        <option {{auth()->user()->district=='Rajshahi'}} value="Rajshahi">Rajshahi</option>
-                                                        <option {{auth()->user()->district=='Rangamati'}} value="Rangamati">Rangamati</option>
-                                                        <option {{auth()->user()->district=='Rangpur'}} value="Rangpur">Rangpur</option>
-                                                        <option {{auth()->user()->district=='Satkhira'}} value="Satkhira">Satkhira</option>
-                                                        <option {{auth()->user()->district=='Shariatpur'}} value="Shariatpur">Shariatpur</option>
-                                                        <option {{auth()->user()->district=='Sherpur'}} value="Sherpur">Sherpur</option>
-                                                        <option {{auth()->user()->district=='Sirajganj'}} value="Sirajganj">Sirajganj</option>
-                                                        <option {{auth()->user()->district=='Sunamganj'}} value="Sunamganj">Sunamganj</option>
-                                                        <option {{auth()->user()->district=='Sylhet'}} value="Sylhet">Sylhet</option>
-                                                        <option {{auth()->user()->district=='Tangail'}} value="Tangail">Tangail</option>
-                                                        <option {{auth()->user()->district=='Thakurgaon'}} value="Thakurgaon">Thakurgaon</option>
-                                                    </select>
+                                                    <label for="district">District </label>
 
+                                                    <select id="district"
+                                                        class="form-control"
+                                                        name="city"  >
+                                                        <option >Select</option>
+                                                        @foreach ($district as $dis )
+                                                              <option value="{{$dis->zone}}">{{$dis->zone}}</option>
+                                                        @endforeach
+                                                      
+                                                      
+                                                    </select>
 
                                                 </div>
                                             </div>
                                             <div class="row">
                                                 <div class="form-group col-md-7 col-12">
-                                                    <label for="position2">Thana</label>
-                                                    <select id="position2" class="form-control" name="thana">
-                                                        <option {{auth()->user()->district=='Bagerhat'}} value="Bagerhat">Bagerhat</option>
-                                                        <option {{auth()->user()->district=='Bandarban'}} value="Bandarban">Bandarban</option>
-                                                        <option {{auth()->user()->district=='Barguna'}} value="Barguna">Barguna</option>
-                                                        <option {{auth()->user()->district=='Barisal'}} value="Barisal">Barisal</option>
-                                                        <option {{auth()->user()->district=='Bhola'}} value="Bhola">Bhola</option>
-                                                        <option {{auth()->user()->district=='Bogra'}} value="Bogra">Bogra</option>
-                                                        <option {{auth()->user()->district=='Brahmanbaria'}} value="Brahmanbaria">Brahmanbaria</option>
-                                                        <option {{auth()->user()->district=='Chandpur'}} value="Chandpur">Chandpur</option>
-                                                        <option {{auth()->user()->district=='Chittagong'}} value="Chittagong">Chittagong</option>
-                                                        <option {{auth()->user()->district=='Chuadanga'}} value="Chuadanga">Chuadanga</option>
-                                                        <option {{auth()->user()->district=='Comilla'}} value="Comilla">Comilla</option>
-                                                        <option {{auth()->user()->district=='Cox"sBazar'}} value="Cox'sBazar">Cox'sBazar</option>
-                                                        <option {{auth()->user()->district=='Dhaka'}} value="Dhaka">Dhaka</option>
-                                                        <option {{auth()->user()->district=='Dinajpur'}} value="Dinajpur">Dinajpur</option>
-                                                        <option {{auth()->user()->district=='Faridpur'}} value="Faridpur">Faridpur</option>
-                                                        <option {{auth()->user()->district=='Feni'}} value="Feni">Feni</option>
-                                                        <option {{auth()->user()->district=='Gaibandha'}} value="Gaibandha">Gaibandha</option>
-                                                        <option {{auth()->user()->district=='Gazipur'}} value="Gazipur">Gazipur</option>
-                                                        <option {{auth()->user()->district=='Gopalganj'}} value="Gopalganj">Gopalganj</option>
-                                                        <option {{auth()->user()->district=='Habiganj'}} value="Habiganj">Habiganj</option>
-                                                        <option {{auth()->user()->district=='Jaipurhat'}} value="Jaipurhat">Jaipurhat</option>
-                                                        <option {{auth()->user()->district=='Jamalpur'}} value="Jamalpur">Jamalpur</option>
-                                                        <option {{auth()->user()->district=='Jessore'}} value="Jessore">Jessore</option>
-                                                        <option {{auth()->user()->district=='Jhalokati'}} value="Jhalokati">Jhalokati</option>
-                                                        <option {{auth()->user()->district=='Jhenaidah'}} value="Jhenaidah">Jhenaidah</option>
-                                                        <option {{auth()->user()->district=='Khagrachari'}} value="Khagrachari">Khagrachari</option>
-                                                        <option {{auth()->user()->district=='Khulna'}} value="Khulna">Khulna</option>
-                                                        <option {{auth()->user()->district=='Kishoreganj'}} value="Kishoreganj">Kishoreganj</option>
-                                                        <option {{auth()->user()->district=='Kurigram'}} value="Kurigram">Kurigram</option>
-                                                        <option {{auth()->user()->district=='Kushtia'}} value="Kushtia">Kushtia</option>
-                                                        <option {{auth()->user()->district=='Lakshmipur'}} value="Lakshmipur">Lakshmipur</option>
-                                                        <option {{auth()->user()->district=='Lalmonirhat'}} value="Lalmonirhat">Lalmonirhat</option>
-                                                        <option {{auth()->user()->district=='Madaripur'}} value="Madaripur">Madaripur</option>
-                                                        <option {{auth()->user()->district=='Magura'}} value="Magura">Magura</option>
-                                                        <option {{auth()->user()->district=='Manikganj'}} value="Manikganj">Manikganj</option>
-                                                        <option {{auth()->user()->district=='Maulvibazar'}} value="Maulvibazar">Maulvibazar</option>
-                                                        <option {{auth()->user()->district=='Meherpur'}} value="Meherpur">Meherpur</option>
-                                                        <option {{auth()->user()->district=='Munshiganj'}} value="Munshiganj">Munshiganj</option>
-                                                        <option {{auth()->user()->district=='Mymensingh'}} value="Mymensingh">Mymensingh</option>
-                                                        <option {{auth()->user()->district=='Naogaon'}} value="Naogaon">Naogaon</option>
-                                                        <option {{auth()->user()->district=='Narail'}} value="Narail">Narail</option>
-                                                        <option {{auth()->user()->district=='Narayanganj'}} value="Narayanganj">Narayanganj</option>
-                                                        <option {{auth()->user()->district=='Narsingdi'}} value="Narsingdi">Narsingdi</option>
-                                                        <option {{auth()->user()->district=='Natore'}} value="Natore">Natore</option>
-                                                        <option {{auth()->user()->district=='Nawabganj'}} value="Nawabganj">Nawabganj</option>
-                                                        <option {{auth()->user()->district=='Netrokona'}} value="Netrokona">Netrokona</option>
-                                                        <option {{auth()->user()->district=='Nilphamari'}} value="Nilphamari">Nilphamari</option>
-                                                        <option {{auth()->user()->district=='Noakhali'}} value="Noakhali">Noakhali</option>
-                                                        <option {{auth()->user()->district=='Pabna'}} value="Pabna">Pabna</option>
-                                                        <option {{auth()->user()->district=='Panchagarh'}} value="Panchagarh">Panchagarh</option>
-                                                        <option {{auth()->user()->district=='Patuakhali'}} value="Patuakhali">Patuakhali</option>
-                                                        <option {{auth()->user()->district=='Pirojpur'}} value="Pirojpur">Pirojpur</option>
-                                                        <option {{auth()->user()->district=='Rajbari'}} value="Rajbari">Rajbari</option>
-                                                        <option {{auth()->user()->district=='Rajshahi'}} value="Rajshahi">Rajshahi</option>
-                                                        <option {{auth()->user()->district=='Rangamati'}} value="Rangamati">Rangamati</option>
-                                                        <option {{auth()->user()->district=='Rangpur'}} value="Rangpur">Rangpur</option>
-                                                        <option {{auth()->user()->district=='Satkhira'}} value="Satkhira">Satkhira</option>
-                                                        <option {{auth()->user()->district=='Shariatpur'}} value="Shariatpur">Shariatpur</option>
-                                                        <option {{auth()->user()->district=='Sherpur'}} value="Sherpur">Sherpur</option>
-                                                        <option {{auth()->user()->district=='Sirajganj'}} value="Sirajganj">Sirajganj</option>
-                                                        <option {{auth()->user()->district=='Sunamganj'}} value="Sunamganj">Sunamganj</option>
-                                                        <option {{auth()->user()->district=='Sylhet'}} value="Sylhet">Sylhet</option>
-                                                        <option {{auth()->user()->district=='Tangail'}} value="Tangail">Tangail</option>
-                                                        <option {{auth()->user()->district=='Thakurgaon'}} value="Thakurgaon">Thakurgaon</option>
+                                                    <label for="thana">Thana </label>
 
+                                                    <select 
+                                                        class="form-control"
+                                                        name="thana" id="thana">
+                                                        <option >Select</option>
+                                                        
                                                     </select>
                                                 </div>
                                                 <div class="form-group col-md-5 col-12">
@@ -542,8 +425,76 @@
             </div>
         </div>
     </section>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script>
+
+    $(document).ready(function () {
+
+
+
+        /*------------------------------------------
+
+        --------------------------------------------
+
+        Country Dropdown Change Event
+
+        --------------------------------------------
+
+        --------------------------------------------*/
+
+        $('#district').on('change', function () {
+
+            var zone = this.value;
+
+            $("#thana").html('');
+
+            $.ajax({
+
+                url: "{{route('get-thana')}}",
+
+                type: "POST",
+
+                data: {
+
+                    zone: zone,
+
+                    _token: '{{csrf_token()}}'
+
+                },
+
+                dataType: 'json',
+
+                success: function (result) {
+
+                    $('#thana').html('<option value="">-- Select Thana --</option>');
+
+                    $.each(result.thana, function (key, value) {
+
+                        $("#thana").append('<option value="' + value
+
+                            .id + '">' + value.name + '</option>');
+
+                    });
+
+                   
+
+                }
+
+            });
+
+        });
+
+
+
+   
+    });
+
+</script>
+
 @endsection
 
 
 @section('js')
+
 @endsection

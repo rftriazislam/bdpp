@@ -8,7 +8,7 @@
     </style>
 @endsection
 @section('content')
-<h3 class="  d-flex justify-content-center"> My Team</h3>
+<h3 class="  d-flex justify-content-center">Leader Board</h3>
     <div class="row ">
         @foreach ($user as $us)
             <a class=" col-xl-4 col-lg-6 col-md-6 col-sm-6 " href=" " style="text-decoration: none">
