@@ -28,20 +28,20 @@
                                                 $now = new DateTime();
                                                 $interval = $now->diff($date);
                                                 $age = $interval->y;
-                                                $age;
-                                                if ($user->total >= 15 && $user->total <= 17) {
+                                                
+                                                if ($age >= 15 && $age <= 17) {
                                                     echo 'GEN-01';
-                                                } elseif ($user->total >= 18 && $user->total <= 22) {
+                                                } elseif ($age >= 18 && $age <= 22) {
                                                     echo 'GEN-02';
-                                                } elseif ($user->total >= 23 && $user->total <= 28) {
+                                                } elseif ($age >= 23 && $age <= 28) {
                                                     echo 'GEN-03';
-                                                } elseif ($user->total >= 29 && $user->total <= 35) {
+                                                } elseif ($age >= 29 && $age <= 35) {
                                                     echo 'GEN-04';
-                                                } elseif ($user->total >= 36 && $user->total <= 40) {
+                                                } elseif ($age >= 36 && $age <= 40) {
                                                     echo 'GEN-05';
-                                                } elseif ($user->total >= 41 && $user->total <= 50) {
+                                                } elseif ($age >= 41 && $age <= 50) {
                                                     echo 'GEN-06';
-                                                } elseif ($user->total > 51) {
+                                                } elseif ($age > 51) {
                                                     echo 'GEN-07';
                                                 }
                                             @endphp
