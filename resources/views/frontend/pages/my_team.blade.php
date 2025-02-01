@@ -28,8 +28,9 @@
                                                 $now = new DateTime();
                                                 $interval = $now->diff($date);
                                                 $age = $interval->y;
-                                                
-                                                if ($age >= 15 && $age <= 17) {
+                                                if ($age < 15) {
+                                                    echo 'GEN-00';
+                                                } elseif ($age >= 15 && $age <= 17) {
                                                     echo 'GEN-01';
                                                 } elseif ($age >= 18 && $age <= 22) {
                                                     echo 'GEN-02';
