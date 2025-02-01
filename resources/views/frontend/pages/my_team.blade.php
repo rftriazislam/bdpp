@@ -8,7 +8,7 @@
     </style>
 @endsection
 @section('content')
-    {{-- <h3 class="  d-flex justify-content-center"> My Team</h3> --}}
+    <h3 class="  d-flex justify-content-center"> My Team</h3>
     <div class="row ">
         @foreach ($users as $user)
             <a class=" col-xl-4 col-lg-6 col-md-6 col-sm-6 " href=" " style="text-decoration: none">
@@ -83,7 +83,7 @@
 
                                         </h5>
                                         <h5 class="font-15">Member :<span style="font-weight: 300">
-                                                {{ $user->total }}</span> </h5>
+                                                {{ $user->total?$user->total:0 }}</span> </h5>
 
                                     </div>
                                 </div>
