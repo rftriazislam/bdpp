@@ -28,30 +28,22 @@
                                                 $now = new DateTime();
                                                 $interval = $now->diff($date);
                                                 $age = $interval->y;
-                                                echo  $age;
-                                                // if ($user->birth_day <= 5) {
-                                                //     echo 'Group Leader';
-                                                // } elseif ($user->total > 5 && $user->total <= 25) {
-                                                //     echo 'Unit Leader';
-                                                // } elseif ($user->total > 25 && $user->total <= 125) {
-                                                //     echo 'Team Leader';
-                                                // } elseif ($user->total > 125 && $user->total <= 625) {
-                                                //     echo 'Generation Leader';
-                                                // } elseif ($user->total > 625 && $user->total <= 3125) {
-                                                //     echo 'Ward Leader';
-                                                // } elseif ($user->total > 3125 && $user->total <= 15625) {
-                                                //     echo 'Union Leader';
-                                                // } elseif ($user->total > 15625 && $user->total <= 78125) {
-                                                //     echo 'Prime Leader';
-                                                // } elseif ($user->total > 78125 && $user->total <= 390625) {
-                                                //     echo 'District Leader';
-                                                // } elseif ($user->total > 390625 && $user->total <= 1953125) {
-                                                //     echo 'Division Leader';
-                                                // } elseif ($user->total > 1953125 && $user->total <= 9765625) {
-                                                //     echo 'Country Leader';
-                                                // } elseif ($user->total > 9765625) {
-                                                //     echo 'Super Leader';
-                                                // }
+                                                $age;
+                                                if ($user->total >= 15 && $user->total <= 17) {
+                                                    echo 'GEN-01';
+                                                } elseif ($user->total >= 18 && $user->total <= 22) {
+                                                    echo 'GEN-02';
+                                                } elseif ($user->total >= 23 && $user->total <= 28) {
+                                                    echo 'GEN-03';
+                                                } elseif ($user->total >= 29 && $user->total <= 35) {
+                                                    echo 'GEN-04';
+                                                } elseif ($user->total >= 36 && $user->total <= 40) {
+                                                    echo 'GEN-05';
+                                                } elseif ($user->total >= 41 && $user->total <= 50) {
+                                                    echo 'GEN-06';
+                                                } elseif ($user->total > 51) {
+                                                    echo 'GEN-07';
+                                                }
                                             @endphp
 
 
