@@ -80,7 +80,7 @@
                         <option value="" >Select</option>
                         
                     </select>
-                    <x-input-error :messages="$errors->get('city')" class="mt-2" />
+                    <x-input-error :messages="$errors->get('thana')" class="mt-2" />
                 </div>
             </div>
             <div class=" px-6 py-4 bg-white  rounded-lg " style="margin-bottom: 5px">
